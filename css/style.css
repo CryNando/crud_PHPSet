@@ -1,5 +1,33 @@
+body{
+	background-image: url("https://wallpaperbrowse.com/media/images/384734-balloon-wallpaper.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.form-control{	
+	margin-bottom:5px;		
+}
+
 .login-container{
-	margin:0 auto;
-	width:100%;
- 
+	border-radius:10px;
+    padding:10px;
+    position:absolute;
+    top:50%;
+    left:60%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.name-container{
+	border-radius:10px;
+    padding:10px;
+    position:absolute;
+    top:50%;
+    left:30%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.register-form{
+		margin-top:20px;
 }
