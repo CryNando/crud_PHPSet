@@ -18,8 +18,8 @@ try {
 
 
 	// Connection
-    $dbh = new PDO('mysql:host=localhost;dbname=dbProjetoPHP', $user, $pass);
-    $query = "SELECT COUNT(*) from usuarios where username='".$username."' AND password='".$password."'";
+    $dbh = new PDO('mysql:host=localhost;dbname=crud_phpset', $user, $pass);
+    $query = "SELECT COUNT(*) from user where user='".$username."' AND password='".$password."'";
     $result = $dbh->query($query);
 
 
