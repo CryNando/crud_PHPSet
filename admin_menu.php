@@ -7,7 +7,7 @@
 				<a href="show_clients.php">Show Clients</a>
 			</li>
 			<li>
-				<a href="#">Logout</a>
+				<a href="index.html">Logout</a>
 			</li>
 		</ul>
 	</div>

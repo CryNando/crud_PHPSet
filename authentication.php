@@ -1,10 +1,7 @@
 <?php
-	// Developed by Rogerio T. H   rogeriotakashi@hotmail.com
-	// Using XAMPP (Apache + mysql)
-	// Database default user and pass from mysql
-	// To Do List:
-	// Encrypt password
-	// Redirect user biased on his access level
+
+session_start();
+
 function checkUser() {
 
 
@@ -31,6 +28,8 @@ function checkUser() {
 	    if($result->rowCount() > 0) {
 		    //echo "User Connected! Redirect user to his userpage";
 		    $user = $result->fetch(PDO::FETCH_ASSOC);
+		    $_SESSION['username'] = $user['username'];
+		    $_SESSION['cpf'] = $user['cpf'];
 		    return $user['type'];
 	    }
 
