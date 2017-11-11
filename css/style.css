@@ -1,6 +1,9 @@
 body{
-	background-image: url("https://wallpaperbrowse.com/media/images/384734-balloon-wallpaper.jpeg");
-	background-repeat: no-repeat;
+	background: url("https://wallpaperbrowse.com/media/images/384734-balloon-wallpaper.jpeg");
+	background-repeat: no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
 }
 
@@ -30,4 +33,14 @@ body{
 
 .register-form{
 		margin-top:20px;
+}
+
+#sidebar-wrapper {
+	float: left;
+}
+
+.show-clients-container {
+	position:absolute;
+	top: 10%;
+	left:30%;
 }
