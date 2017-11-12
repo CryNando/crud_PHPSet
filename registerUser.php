@@ -47,8 +47,7 @@
 			WHERE cpf = '".$cpf."'";
 			$conn->exec($sql);
 		}else {			
-			$sql = "INSERT INTO user (firstname,lastname,username,password,type,birthday,phone,email,cpf,street,number,complement,city,cep,country) VALUES ('".$firstname."','".$lastname."','".$username."','".$password."','".$type."','".$birthday."','".$cpf."','".$phone."','".$email."','".$street."', '".$number."', '".$complement."','".$city."','".$cep."', '".$country."')";
-
+			$sql = "INSERT INTO user VALUES ('".$firstname."','".$lastname."','".$username."','".$password."','".$type."','".$birthday."','".$cpf."','".$phone."','".$email."','".$street."', '".$number."', '".$complement."','".$city."','".$cep."', '".$country."')";
 			$conn->exec($sql);
 		}
 	}
