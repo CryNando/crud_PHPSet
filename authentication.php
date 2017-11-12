@@ -25,7 +25,6 @@ function checkUser() {
 	    $result = $dbh->query($query);
 
 
-
 	    // Redirection
 	    if($result->rowCount() > 0) {
 		    //echo "User Connected! Redirect user to his userpage";
