@@ -75,7 +75,15 @@
 		<div class="container">
 			<div class="text-center">
 			<h2 class=""><?php echo $output ?></h2>
-			<a href="register_or_update.php" class="btn btn-info" role="button">Voltar</a>
+			<?php 
+				$back_link = "";
+				if ($type == 1) 
+					$back_link = "register_or_update.php";
+				else
+					$back_link = "client_page.php";
+				
+			?> 
+				<a href="<?php echo $back_link; ?>" class="btn btn-info" role="button">Voltar</a>
 			</div>
 		</div>
 	</body>
