@@ -24,21 +24,40 @@
 			$clients = $conn->query($query);
 
 			echo "<div class='show-clients-container'>";
-			echo "<h3>--- Clients ---</h3><br/>";
+			echo "<table class='table'>";
+			echo "<thead>";
+			echo "<tr>";
+			echo "<th>Firstname</th>";
+			echo "<th>Lastname</th>";
+			echo "<th>Username</th>";
+			echo "<th>Birthday</th>";
+			echo "<th>CPF</th>";
+			echo "<th>Phone</th>";
+			echo "<th>Email</th>";
+			echo "<th>Street</th>";
+			echo "<th>Number</th>";
+			echo "<th>Complement</th>";
+			echo "<th>City</th>";
+			echo "<th>CEP</th>";
+			echo "<th>Country</th>";
+			echo "</tr>";
+			echo "</thead><tbody>";
+
 			while ($cli = $clients->fetch(PDO::FETCH_ASSOC)) {
-				echo "<p>First Name: ".$cli['firstname']."</p>";
-				echo "<p>Last Name: ".$cli['lastname']."</p>";
-				echo "<p>Username: ".$cli['username']."</p>";
-				echo "<p>Birthday: ".$cli['birthday']."</p>";
-				echo "<p>CPF: ".$cli['cpf']."</p>";
-				echo "<p>Phone: ".$cli['phone']."</p>";
-				echo "<p>Email: ".$cli['email']."</p>";
-				echo "<p>Street: ".$cli['street']."</p>";
-				echo "<p>Number: ".$cli['number']."</p>";
-				echo "<p>Complement: ".$cli['complement']."</p>";
-				echo "<p>City: ".$cli['city']."</p>";
-				echo "<p>CEP: ".$cli['cep']."</p>";
-				echo "<p>Country: ".$cli['country']."</p><br/><br/>";
+				echo "<tr>";
+				echo "<td>".$cli['firstname']."</td>";
+				echo "<td>".$cli['lastname']."</td>";
+				echo "<td>".$cli['username']."</td>";
+				echo "<td>".$cli['birthday']."</td>";
+				echo "<td>".$cli['cpf']."</td>";
+				echo "<td>".$cli['phone']."</td>";
+				echo "<td>".$cli['email']."</td>";
+				echo "<td>".$cli['street']."</td>";
+				echo "<td>".$cli['number']."</td>";
+				echo "<td>".$cli['complement']."</td>";
+				echo "<td>".$cli['city']."</td>";
+				echo "<td>".$cli['cep']."</td>";
+				echo "<td>".$cli['country']."</td></tr>";
 			}
 			echo "</div>";
 
