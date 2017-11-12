@@ -5,8 +5,8 @@ Some information:
 1. The SGBD used was MySQL;
 2. The script to create the database, table and insert the admin information, will be posted below.
 
-### Script ###
-# Script to create database, table and insert the data for admin.
+
+### Script to create database, table and insert the data for admin ###
 
 
 CREATE DATABASE crud_PHPSet;
@@ -25,6 +25,9 @@ INSERT INTO `user` VALUES ("Admin","Admin","admin","123456",1,"11/11/1111","111.
 This project was developed by:
 
 Luis F. P. C. Filho
+
 Rodrigo R. Galvão
+
 Rogério T. Hirata
+
 Tiago Alves da Silva
