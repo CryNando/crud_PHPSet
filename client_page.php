@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	</head>
-	<body>
+	<body class="withBG">
 	<div id="sidebar-wrapper">
 		<ul class="sidebar-nav">
 			<li>
@@ -42,8 +42,8 @@
 				<form class="register-form" method="POST" action="registerUser.php">
 				<input type="text" class="form-control" name="firstname" placeholder="First Name"  value="<?php echo $cli['firstname']; ?>" >
 				<input type="text" class="form-control" name="lastname" placeholder="Last Name" value="<?php echo $cli['lastname']; ?>"/>
-				<input type="text" class="form-control" name="user" placeholder="User" value="<?php echo $cli['user']; ?>" />
-					<input type="password" class="form-control" name="password" placeholder="Password" />
+				<input type="text" class="form-control" name="user" placeholder="User" value="<?php echo $cli['username']; ?>" />
+					<input type="text" class="form-control" name="password" placeholder="Password" value="<?php echo $cli['password']; ?>" />
 					<select class="form-control" name="type">
 						<option value="" disabled selected> Type </option>
 						<?php if ($cli['type'] == 1) { ?>

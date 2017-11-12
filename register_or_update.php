@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	</head>
 	
-	</body>
+	</body class="withBG">
 	<?php require 'admin_menu.php'; ?>
 		<div class="register-container row justify-content-center">
 			<div class="register-user text-center col-md-4">

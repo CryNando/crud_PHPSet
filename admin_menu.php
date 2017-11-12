@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="menu.js"></script>
 </head>
 
-<body>
+<body class="withBG">
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="location" onclick="closeNav()">&times;</a>
 		<a href="register_or_update.php">Add/Update Client</a>
