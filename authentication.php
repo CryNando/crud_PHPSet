@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
 
 function checkUser() {
 
@@ -18,8 +20,8 @@ function checkUser() {
 
 		// Connection
 	    $dbh = new PDO('mysql:host=localhost;dbname=crud_PHPSet', $user, $pass);
-	    //$query = "SELECT COUNT(*) from user where user='".$username."' AND password='".$password."'";
-	    $query = "SELECT * FROM user where user='".$username."' AND password='".$password."'";
+	    //$query = "SELECT COUNT(*) from user where username='".$username."' AND password='".$password."'";
+	    $query = "SELECT * FROM user where username='".$username."' AND password='".$password."'";
 	    $result = $dbh->query($query);
 
 

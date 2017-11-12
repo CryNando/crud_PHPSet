@@ -29,12 +29,25 @@
 		$sql = "";
 		
 		if($result->rowCount() > 0){
-			$sql = "UPDATE user SET firstname = '".$firstname."', lastname = '".$lastname."', user = '".$username."', password = '".$password."', type = '".$type."', birthday = '".$birthday."', phone = '".$phone."', email = '".$email."', cpf = '".$cpf."', street = '".$street."', number = '".$number."', complement = '".$complement."', city = '".$city."', cep = '".$cep."', country = '".$country."' WHERE cpf = '".$cpf."'";
-			echo "<br/>".$sql."<br/>";
-			$conn->exec(sql);
+			$sql = "UPDATE user SET
+			firstname = '".$firstname."',
+			lastname = '".$lastname."',
+			username = '".$username."',
+			password = '".$password."',
+			type = '".$type."',
+			birthday = '".$birthday."',
+			phone = '".$phone."',
+			email = '".$email."', 
+			street = '".$street."',
+			number = '".$number."',
+			complement = '".$complement."',
+			city = '".$city."',
+			cep = '".$cep."',
+			country = '".$country."'
+			WHERE cpf = '".$cpf."'";
+			$conn->exec($sql);
 		}else {			
 			$sql = "INSERT INTO user VALUES ('".$firstname."','".$lastname."','".$username."','".$password."','".$type."','".$birthday."','".$cpf."','".$phone."','".$email."','".$street."', '".$number."', '".$complement."','".$city."','".$cep."', '".$country."')";
-			//echo "<br/>".$sql."<br/>";
 			$conn->exec($sql);
 		}
 	}
