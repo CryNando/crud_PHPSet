@@ -46,9 +46,12 @@
 			country = '".$country."'
 			WHERE cpf = '".$cpf."'";
 			$conn->exec($sql);
+			$output= "User Updated!";
+
 		}else {			
 			$sql = "INSERT INTO user VALUES ('".$firstname."','".$lastname."','".$username."','".$password."','".$type."','".$birthday."','".$cpf."','".$phone."','".$email."','".$street."', '".$number."', '".$complement."','".$city."','".$cep."', '".$country."')";
 			$conn->exec($sql);
+			$output= "User Added!";
 		}
 	}
 		
@@ -58,3 +61,22 @@
 	}
 
 ?>
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>crud_PHPSet</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center">
+			<h2 class=""><?php echo $output ?></h2>
+			<a href="register_or_update.php" class="btn btn-info" role="button">Voltar</a>
+			</div>
+		</div>
+	</body>
+</html>

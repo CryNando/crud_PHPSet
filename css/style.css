@@ -45,6 +45,12 @@ body{
 	left:50%;
 }
 */
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
